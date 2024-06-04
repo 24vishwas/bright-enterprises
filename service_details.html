@@ -118,28 +118,46 @@
                 </div>
             </div>
         </nav>
-        <section class="project-hero-section">
-            <div class="project-hero-container">
+        <section class="service-hero-section">
+            <div class="service-hero-container">
             </div>
         </section>
-        <section class="project-page-content-section">
-            <div class="project-page-content-container container">
+        <section class="service-page-content-section">
+            <div class="service-page-content-container container">
                 <h1>Epoxy Flooring</h1>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque praesentium rerum pariatur sit dicta, laudantium necessitatibus totam repellendus deserunt consequuntur perspiciatis excepturi, aliquam nesciunt iusto sequi magni iste sint veritatis?</p>
                 <p>
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam iure provident ullam dolorem, eos perspiciatis quo ad inventore quibusdam rerum laborum nihil at quasi aliquam illum culpa mollitia magni vitae voluptate. Quidem temporibus libero, facilis reiciendis, est quae incidunt dolorum fuga voluptatum similique rerum recusandae minima vel sapiente possimus exercitationem.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam iure provident ullam dolorem, eos perspiciatis quo ad inventore quibusdam rerum laborum nihil at quasi aliquam illum culpa mollitia magni vitae voluptate. Quidem temporibus libero, facilis reiciendis, est quae incidunt dolorum fuga voluptatum similique rerum recusandae minima vel sapiente possimus exercitationem.
                 </p>
-                <div class="project-page-content-gallery">
-                    <div class="project-page-content-gallery-img">
-                        <img src="./assets/gallery-1.png" alt="image">
+                <section class="gallery-section">
+                    <div class="gallery-container container">
+                        <h2>GALLERY</h2>
+                        <div class="tab-container">
+                            <div class="tab-content-container">
+                                <div id="all" class="tab-content active">
+                                    <div class="gallery">
+                                        <!-- Images will be populated by JavaScript -->
+                                    </div>
+                                </div>
+                                <div id="EPOXY FLOORINGS" class="tab-content">
+                                    <div class="gallery">
+                                        <img src="./gallery/epoxy flooring/1.webp" alt="Image 1">
+                                        <img src="./gallery/epoxy flooring/2.webp" alt="Image 1">
+                                        <img src="./gallery/epoxy flooring/3.webp" alt="Image 1">
+                                        <img src="./gallery/epoxy flooring/4.webp" alt="Image 1">
+                                        <img src="./gallery/epoxy flooring/5.webp" alt="Image 1">
+                                    </div>
+                                </div>
+                              
+                               
+                            </div>
+                            <div id="lightboxModal" class="lightbox-modal">
+                                <span class="close" onclick="closeLightbox()">&times;</span>
+                                <img class="lightbox-content" id="lightboxImage">
+                              </div>
+                        </div>
                     </div>
-                    <div class="project-page-content-gallery-img">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
-                    <div class="project-page-content-gallery-img">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
-                </div>
+                </section>
             </div>
         </section>
         <footer>
@@ -182,6 +200,6 @@
             </div>
         </footer>
     </main>
-	<!-- <script src="index.js"></script> -->
+	<script src="index.js"></script>
   </body>
 </html>

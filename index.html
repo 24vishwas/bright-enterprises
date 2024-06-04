@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Website</title>
+    <title>Bright Enterprises</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -355,31 +355,56 @@
         <section class="gallery-section">
             <div class="gallery-container container">
                 <h1>GALLERY</h1>
-                <div class="gallery-wrapper">
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
+                <div class="tab-container">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'all')">All</button>
+                        <button class="tab-button" onclick="openTab(event, 'EPOXY FLOORINGS')">EPOXY FLOORINGS</button>
+                        <button class="tab-button" onclick="openTab(event, 'EPOXY MACHINE BEDS')">EPOXY MACHINE BEDS</button>
+                        <button class="tab-button" onclick="openTab(event, 'CHEMICAL RESISTANT EPOXY')">CHEMICAL RESISTANT EPOXY</button>
+                        
                     </div>
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
+                    <div class="tab-content-container">
+                        <div id="all" class="tab-content active">
+                            <h2>All </h2>
+                            <div class="gallery">
+                                <!-- Images will be populated by JavaScript -->
+                            </div>
+                        </div>
+                        <div id="EPOXY FLOORINGS" class="tab-content">
+                            <h2>EPOXY FLOORINGS</h2>
+                            <div class="gallery">
+                                <img src="./gallery/epoxy flooring/1.webp" alt="Image 1">
+                                <img src="./gallery/epoxy flooring/2.webp" alt="Image 1">
+                                <img src="./gallery/epoxy flooring/3.webp" alt="Image 1">
+                                <img src="./gallery/epoxy flooring/4.webp" alt="Image 1">
+                                <img src="./gallery/epoxy flooring/5.webp" alt="Image 1">
+                            </div>
+                        </div>
+                        <div id="EPOXY MACHINE BEDS" class="tab-content">
+                            <h2>EPOXY MACHINE BEDS</h2>
+                            <div class="gallery">
+                                <img src="./gallery/EPOXY MACHINE BEDS/1.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY MACHINE BEDS/2.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY MACHINE BEDS/3.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY MACHINE BEDS/4.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY MACHINE BEDS/5.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY MACHINE BEDS/6.webp" alt="Image 1">
+                            </div>
+                        </div>
+                        <div id="CHEMICAL RESISTANT EPOXY" class="tab-content">
+                            <h2>CHEMICAL RESISTANT EPOXY</h2>
+                            <div class="gallery">
+                                <img src="./gallery/EPOXY PATHWAYS STRIPS MARKING COATINGS/1.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY PATHWAYS STRIPS MARKING COATINGS/2.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY PATHWAYS STRIPS MARKING COATINGS/3.webp" alt="Image 1">
+                                <img src="./gallery/EPOXY PATHWAYS STRIPS MARKING COATINGS/4.webp" alt="Image 1">
+                            </div>
+                        </div>
                     </div>
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
-                    <div class="gallery-image">
-                        <img src="./assets/gallery-1.png" alt="image">
-                    </div>
+                    <div id="lightboxModal" class="lightbox-modal">
+                        <span class="close" onclick="closeLightbox()">&times;</span>
+                        <img class="lightbox-content" id="lightboxImage">
+                      </div>
                 </div>
             </div>
         </section>

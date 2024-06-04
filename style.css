@@ -426,10 +426,6 @@ nav{
 }
 
 @media(max-width: 991px) {
-    
-    nav{
-        /* background-color: #fff; */
-    }
     .logo-container{
         display: inline-block;
     }
@@ -443,7 +439,7 @@ nav{
 
     .nav-btn {
         position: fixed;
-        height: calc(80vh - 3rem);
+        height: 100vh;
         top: 0rem;
         left: 0;
         width: 100%;
@@ -474,6 +470,7 @@ nav{
 
     .nav-links>ul {
         flex-direction: column;
+        gap: 0px;
     }
 
     .nav-link {
@@ -522,7 +519,7 @@ nav{
     .dropdown-link>a {
         background-color: transparent;
         /* color: #fff; */
-        padding: 1.2rem 2rem;
+        padding: 0.7rem 2rem;
         line-height: 1;
     }
 
@@ -578,11 +575,7 @@ nav{
 
 
 }
-@media (max-width:368px) {
-    .nav-btn{
-        top: 11.5rem;
-    }
-}
+
 
 .nav-link a span{
     display: flex;
@@ -998,16 +991,128 @@ nav{
     margin-bottom: 30px;    
 }
 
-.gallery-wrapper{
-    /* display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 50px;      */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: repeat(2, 1fr);
-    gap: 50px;
+
+
+
+.tab-container {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
 }
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px 15px;
+    text-align: center;
+    cursor: pointer;
+    background: #eee;
+    border: none;
+    outline: none;
+    transition: background 0.3s;
+    min-width: 170px;
+    max-width: 180px;
+}
+
+.tab-button:hover, .tab-button.active {
+    background: #ddd;
+}
+
+.tab-content-container {
+    padding: 20px;
+}
+
+.tab-content {
+    display: none;
+}
+.tab-content h2{
+    margin-bottom: 20px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    flex: 1 1 calc(25% - 10px);
+    max-width: calc(25% - 10px);
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+/* Lightbox Modal */
+.lightbox-modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9); /* Black background with opacity */
+}
+
+.lightbox-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width:1200px) {
+    .gallery img {
+        flex: 1 1 calc(33.333% - 10px);
+        max-width: calc(33.333% - 10px);
+    }
+}
+@media (max-width: 600px) {
+    .gallery img {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+}
+
 /* gallery section end */
 
 
@@ -1149,12 +1254,12 @@ footer{
 
 /* project hero section */
 
-.project-hero-section{
+.service-hero-section{
     height: calc(70vh - 100px);
     height: calc(70svh - 100px);
 }
 
-.project-hero-container{
+.service-hero-container{
     background-image: url(./assets/project-hero-image.png);
     background-position: center;
     background-repeat: no-repeat;
@@ -1169,35 +1274,35 @@ footer{
 }
 
 /* project page content section */
-.project-page-content-section{
+.service-page-content-section{
     margin-block: 10%;
 }
 
-.project-page-content-container h1{
+.service-page-content-container h1{
     font-size: 3rem;
 }
-.project-page-content-container p{
+.service-page-content-container p{
     text-align: justify;
 }
-.project-page-content-gallery{
+.service-page-content-gallery{
     display: flex;
     justify-content: center;
     gap: 30px;
     margin-block: 10%;
 }
-.project-page-content-gallery-img{
+.service-page-content-gallery-img{
     width: 20%;
 }
 @media (max-width:991px) {
-    .project-page-content-gallery-img{
+    .service-page-content-gallery-img{
         width: 30%;
     }
 }
 @media (max-width:500px) {
-    .project-page-content-gallery{
+    .service-page-content-gallery{
         flex-wrap: wrap;
     }
-    .project-page-content-gallery-img{
+    .service-page-content-gallery-img{
         width: 40%;
     }
 }
