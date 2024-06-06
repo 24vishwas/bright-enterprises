@@ -612,7 +612,7 @@ nav{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
     height: 300px;
 }
 .hero-card h1{
@@ -648,17 +648,28 @@ nav{
 }
 
 
+@media (max-width:500px) {
+    .hero-card{
+        align-items: center;
+        left: 0;
+    }
+    .hero-card h1{
+        font-size: 2.3rem;
+    }
+    .hero-card h3{
+        font-size: 1rem;
+    }
+}
 
 /* service-section */
 
 .service-section{
     margin-block: 10%;
 }
-.service-container > h3 {
-    margin-bottom: 30px;
-    letter-spacing: 2px;
-    font-weight: 400;
+.service-container > h1 {
     font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 30px; 
 }
 .service-wrapper{
     display: flex;
@@ -1066,6 +1077,8 @@ nav{
 /* Lightbox Modal */
 .lightbox-modal {
     display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -1081,6 +1094,8 @@ nav{
     display: block;
     width: 80%;
     max-width: 700px;
+    height: auto;
+    object-fit: cover;
 }
 
 .close {

@@ -33,7 +33,7 @@ function addLightboxToImages() {
     const images = document.querySelectorAll('.gallery img');
     images.forEach(img => {
         img.addEventListener('click', function() {
-            openLightbox(this.src);
+            openLightbox(this.srcset);
         });
     });
 }
@@ -41,7 +41,7 @@ function addLightboxToImages() {
 function openLightbox(src) {
     const lightboxModal = document.getElementById('lightboxModal');
     const lightboxImage = document.getElementById('lightboxImage');
-    lightboxModal.style.display = 'block';
+    lightboxModal.style.display = 'flex';
     lightboxImage.src = src;
 }
 
