@@ -661,66 +661,12 @@ nav{
     }
 }
 
-/* service-section */
-
-.service-section{
-    margin-block: 10%;
-}
-.service-container > h1 {
-    font-size: 2rem;
-    letter-spacing: 5px;
-    margin-bottom: 30px; 
-}
-.service-wrapper{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    row-gap: 50px;
-}
-
-.service{
-    width: 20%;
-    min-width: 200px;
-    /* max-width: 20%; */
-    margin-inline:auto ;
-    height: 300px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    padding: 15px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: .5s ease;
-    /* flex: 0 1 1; */
-    
-}
-
-.service:hover{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    transform: translateY(-5%);
-}
-
-.service-img-container{
-    width: 80px;
-    height: 80px;
-}
-.service-content p{
- text-align: justify;
- font-size: 12px;
- line-height: initial;
-}
-
-@media (max-width:470px) {
-    .service{
-        width: 100%;
-        height: 250px;
-    }
-}
 
 
 /* ABOUT-SECTION */
+.about-section{
+    margin-top: 10%;
+}
 .about-container{
     display: flex;
     align-items: flex-start;
@@ -873,19 +819,28 @@ nav{
 }
 .products-wrapper{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
-    row-gap: 50px;
+    gap: 50px;
 }
 
 .product{
-    width: 20%;
+    width: calc(25% - 50px);
+    text-align: center;
+    border: 1px solid transparent;
+    transition: .3s ease-in-out;
+    border-radius: 5px;
+    padding: 10px;
+}
+.product:hover{
+    border-color:rgb(106, 105, 105) ;
+}
+.product-image{
+    margin-bottom: 10px;
+    aspect-ratio: 1/1;
 }
 
-.product-image{
-    margin-bottom: 30px;
-}
 .product span{
     font-size: 22px;
 }
@@ -894,15 +849,20 @@ nav{
         justify-content: space-around;
     }
     .product{
-        width: 30%;
+        width: calc(33.3333% - 50px)
     }
 }
 @media (max-width:767px) {
     .products-wrapper{
         justify-content: space-between;
+        gap: 30px;
     }
     .product{
-        width: 45%;
+        width: calc(50% - 30px);
+        text-align: center;
+    }
+    .product-image{
+        margin-bottom: 5px;
     }
     .product span{
         font-size: 16px;
