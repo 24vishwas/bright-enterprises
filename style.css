@@ -1160,7 +1160,7 @@ button a{
 
 /* footer section */
 footer{
-    background-image: url(./assets/footer-bg.png);
+    background-image: url(./assets/footer-bg.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1254,7 +1254,7 @@ footer{
 }
 
 .service-hero-container{
-    background-image: url(./assets/project-hero-image.png);
+    background-image: url(./assets/project-hero-image.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
