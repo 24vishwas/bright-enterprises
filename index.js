@@ -50,3 +50,25 @@ function closeLightbox() {
     const lightboxModal = document.getElementById('lightboxModal');
     lightboxModal.style.display = 'none';
 }
+
+
+// carousel
+document.addEventListener('DOMContentLoaded', () => {
+    const slides = document.querySelector('.slides');
+    const slideImages = document.querySelectorAll('.slide');
+    const slideCount = slideImages.length;
+    let currentIndex = 0;
+
+    // Set the width of the slides container dynamically
+    // slides.style.width = `${slideCount * 100}%`;
+
+    function showNextSlide() {
+        currentIndex++;
+        if (currentIndex >= slideImages.length) {
+            currentIndex = 0;
+        }
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    setInterval(showNextSlide, 3500);
+});

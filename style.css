@@ -597,6 +597,8 @@ nav{
 .bg-image{
     position: absolute;
     top: 0;
+    left: 0;
+    right: 0;
     z-index: -10;
     height: 100vh;
     height: 100svh;
@@ -1308,4 +1310,36 @@ button a{
     .service-page-content-gallery-img{
         width: 40%;
     }
+}
+
+/* before and after section */
+.before-section{
+    margin-bottom: 5%;
+}
+.before-container > h1{
+    font-size: 2rem;
+    letter-spacing: 5px;
+    margin-bottom: 30px;
+}
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform .5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img, .slide picture {
+    width: 100%;
+    object-fit: cover;
+    max-height: 600px;
+    display: block;
 }
