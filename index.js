@@ -33,8 +33,8 @@ function addLightboxToImages() {
     const images = document.querySelectorAll('.gallery img');
     images.forEach(img => {
         img.addEventListener('click', function() {
-            console.log(this.srcset);
-            openLightbox(this.srcset);
+            console.log(this.dataset.srcset);
+            openLightbox(this.dataset.srcset);
         });
     });
 }

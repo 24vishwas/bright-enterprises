@@ -985,6 +985,9 @@ nav{
 
 
 /* GALLERY-SECTION */
+.gallery-section{
+    margin-block: 5%;
+}
 
 .gallery-container h1{
     font-size: 2rem;
@@ -993,6 +996,9 @@ nav{
 }
 
 
+.gallery-container > h2{
+    margin-bottom: 30px;
+}
 
 
 .tab-container {
@@ -1260,8 +1266,8 @@ button a{
 /* project hero section */
 
 .service-hero-section{
-    height: calc(70vh - 100px);
-    height: calc(70svh - 100px);
+    /* height: calc(70vh - 100px); */
+    /* height: calc(70svh - 100px); */
 }
 
 .service-hero-container{
@@ -1270,8 +1276,8 @@ button a{
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 70vh;
-    height: 70svh;
+    /* height: 70vh; */
+    /* height: 70svh; */
     
     position: absolute;
     top: 0;
